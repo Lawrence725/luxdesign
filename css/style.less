@@ -1,0 +1,15 @@
+@import "./base.less";
+@import "./variable.less";
+
+.home { width: 100%; display: flex; flex-direction: column;
+    .portfolios { width: 100%; display: flex; flex-wrap: wrap;
+        .category { width: 50%; display: flex; position: relative;
+            img { width: 100%; }
+            .title { width: 73%; top: 10px; right: 10px; position: absolute; text-align: right; font-size: @fXL; color: white; }}
+        .portfolio { width: 50%; display: flex;
+            img { width: 100%; }}
+        @media screen and (min-width: @sD) {
+            .category, .portfolio { width: 20%; }
+        }
+    }
+}
