@@ -13,26 +13,40 @@
         <!-- CSS -->
         <link href="./css/style.less" rel="stylesheet/less" type="text/css"/>
     </head>
-    <body class="home">
+    <body id="home" class="home">
         <section class="header">
             <img class="logo" src="./img/logo/banner.png">
+            <div class="menus">
+                <a class="menu" href="#portfolio">
+                    <img src="./img/icon/portfolio.svg">
+                    <span>Portfolio</span>
+                </a>
+                <a class="menu" href="#map">
+                    <img src="./img/icon/customers.svg">
+                    <span>Customers</span>
+                </a>
+                <a class="menu" href="#contact">
+                    <img src="./img/icon/contact.svg">
+                    <span>Contact</span>
+                </a>
+            </div>
         </section>
-        <section class="portfolios">
+        <section id="portfolio" class="portfolios">
             <!-- Food Ordering & E-commerce -->
             <div class="category">
                 <img src="./img/category/Food Ordering & E-commerce.png">
                 <span class="title">Food Ordering & E-commerce</span>
             </div>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('quickclick')">
                 <img src="./img/portfolio/QuickClick.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('co')">
                 <img src="./img/portfolio/CO.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('ecommerce')">
                 <img src="./img/portfolio/E-commerce.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('foodie')">
                 <img src="./img/portfolio/Foodie.png">
             </a>
             <!-- Travel & Booking -->
@@ -40,16 +54,16 @@
                 <img src="./img/category/Travel & Booking.png">
                 <span class="title">Travel & Booking</span>
             </div>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('trainTicketing')">
                 <img src="./img/portfolio/Train Ticketing.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('advertisement')">
                 <img src="./img/portfolio/Advertisement.png">
             </a>
-            <a class="portfolio">
-                <img src="./img/portfolio/Taoyuan.png">
+            <a class="portfolio" onclick="popPortfolio('taoyuanPoint')">
+                <img src="./img/portfolio/Taoyuan Point.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('ttpush')">
                 <img src="./img/portfolio/TTPush.png">
             </a>
             <!-- Business Website -->
@@ -57,16 +71,16 @@
                 <img src="./img/category/Business Website.png">
                 <span class="title">Business Website</span>
             </div>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('countdown')">
                 <img src="./img/portfolio/Countdown.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('company')">
                 <img src="./img/portfolio/Company.png">
             </a>
-            <a class="portfolio">
-                <img src="./img/portfolio/Members.png">
+            <a class="portfolio" onclick="popPortfolio('capitalLink')">
+                <img src="./img/portfolio/Capital LINK.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('interiorDesign')">
                 <img src="./img/portfolio/Interior design.png">
             </a>
             <!-- Social Networking -->
@@ -74,16 +88,16 @@
                 <img src="./img/category/Social Networking.png">
                 <span class="title">Social Networking</span>
             </div>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('social')">
                 <img src="./img/portfolio/Social.png">
             </a>
-            <a class="portfolio">
-                <img src="./img/portfolio/The Cat.png">
+            <a class="portfolio" onclick="popPortfolio('wolfpack')">
+                <img src="./img/portfolio/WOLFPACK.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('health')">
                 <img src="./img/portfolio/Health.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('coupon')">
                 <img src="./img/portfolio/Coupon.png">
             </a>
             <!-- Financial & Banking -->
@@ -91,16 +105,16 @@
                 <img src="./img/category/Financial & Banking.png">
                 <span class="title">Financial & Banking</span>
             </div>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('pay')">
                 <img src="./img/portfolio/Pay.png">
             </a>
-            <a class="portfolio">
-                <img src="./img/portfolio/Portal.png">
+            <a class="portfolio" onclick="popPortfolio('p360')">
+                <img src="./img/portfolio/360.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('qrTap')">
                 <img src="./img/portfolio/QR Tap.png">
             </a>
-            <a class="portfolio">
+            <a class="portfolio" onclick="popPortfolio('trendspotter')">
                 <img src="./img/portfolio/TrendSpotter.png">
             </a>
             <!-- <a class="portfolio">
@@ -110,8 +124,52 @@
                 <img src="./img/portfolio/Capital.png">
             </a> -->
         </section>
-
+        <section id="map" class="map">
+            <div class="banner">
+                <span class="title">Worldwide Customers</span>
+            </div>
+            <img src="./img/Map.png">
+        </section>
+        <section id="contact" class="contact">
+            <img src="./img/Contact.png">
+            <form action="mailto:service@luxdesign.io" method="GET">
+                <span class="title">Contact Us</span>
+                <span class="heading">Subject</span>
+                <input class="subject" name="subject" type="text" />
+                <span class="heading">Content</span>
+                <textarea class="content" name="body" oninput="textarea(this)"></textarea>
+                <button class="submit" type="submit">Send</button>
+            </form>
+        </section>
+        <!-- Portfolio popup -->
+        <section id="popPortfolio" class="pop" onclick="popClose(this)">
+            <div class="pop__body">
+                <a class="close" onclick="popClose(this)"><img src="./img/icon/close.svg"></a>
+                <img id="popImage" class="image">
+                <div id="popDetail" class="detail">
+                    <div class="top">
+                        <img id="popLogo" class="logo">
+                        <span id="popTitle" class="title"></span>
+                    </div>
+                    <table id="popTable">
+                        <tr><th>Date</th>       <td id="popDate"></td></tr>
+                        <tr><th>Platform</th>   <td class="platform">
+                            <img id="popIos" src="./img/icon/ios.svg">
+                            <img id="popAndroid" src="./img/icon/android.svg">
+                            <img id="popMobile" src="./img/icon/mobile.svg">
+                            <img id="popTablet" src="./img/icon/tablet.svg">
+                            <img id="popDesktop" src="./img/icon/desktop.svg">
+                        </td></tr>
+                        <tr><th>Location</th>     <td id="popLocation"></td></tr>
+                        <tr><th>Client</th>     <td id="popClient"></td></tr>
+                        <tr><th>Link</th>       <td><a id="popLink" target="_blank"></a></td></tr>
+                    </table>
+                    <span id="popDescription" class="description"></span>
+                </div>
+            </div>
+        </section>
         <!-- Script -->
         <script src="./js/less.js" ></script> <!-- Less -->
+        <script src="./js/home.js" ></script>
     </body>
 </html>

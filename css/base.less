@@ -1,5 +1,5 @@
 // Reset
-*                                           { margin: 0; padding: 0; user-select: none; -ms-user-select: none; -webkit-user-select: none; touch-action: manipulation;
+*                                           { margin: 0; padding: 0; scroll-behavior: smooth; user-select: none; -ms-user-select: none; -webkit-user-select: none; touch-action: manipulation;
     &:visited                               { color: inherit; }}
 html, body                                  { overscroll-behavior-x: none; }
 *, span, p, h1, h2, h3, h4, h5, h6, div, a,
@@ -27,6 +27,38 @@ iframe                                      { border: 0; }
 *, :after, :before                          { box-sizing: border-box !important; -webkit-box-sizing: border-box; }
 
 // Components
-.header { width: 100%; height: 80px; padding: 15px 30px; top: 0; position: sticky; display: flex; align-items: center; background-color: white; box-shadow: 0px 5px 10px 0px rgba(55, 84, 170, 0.20); z-index: 10;
-    .logo { height: 100%; }
-}
+.header { width: 100%; height: 80px; padding: 0 20px; top: 0; position: sticky; display: flex; align-items: center; justify-content: space-between; background-color: white; box-shadow: 0px 5px 10px 0px rgba(55, 84, 170, 0.20); z-index: 10;
+    .logo { height: 40px; }
+    .menus { gap: 30px; display: flex; align-items: center;
+        .menu { gap: 5px; display: flex; align-items: center;
+            img { height: 24px; }
+            span { display: none; font-size: @fL;
+                @media screen and (min-width: @sD) { display: flex; }}}}}
+
+.pop { width: 100%; height: 100%; padding: 10%; position: fixed; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.5); display: none; align-items: center; justify-content: center; z-index: 11;
+    @media screen and (min-width: @sD) { padding: 5%; }
+    .pop__body { max-width: 90vw; max-height: 90vh; aspect-ratio: 1/2; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white; overflow: hidden; animation-name: popup; animation-duration: 0.25s; animation-iteration-count: 1;
+        .close { top: 20px; right: 20px; border-radius: 99px; position: absolute; display: flex; background-color: rgba(51, 51, 51, 0.25);
+            img { width: 30px; height: 30px; }}
+        .image { width: 100%; height: 50%; }
+        .detail { width: 100%; height: 50%; padding: 20px; gap: 5px; display: flex; flex-direction: column; overflow-y: auto; scroll-behavior: auto;
+            .top { gap: 15px; display: flex; align-items: center;
+                .logo { height: 40px; }
+                .logo[src=""] { display: none; }}
+            .title { font-size: @fXXXL; }
+            table { -webkit-border-vertical-spacing: 10px;
+                th, td, a { text-align: left; font-size: @fL; font-weight: normal; }
+                th { width: 90px; min-width: 90px; max-width: 90px; color: @cG3; }
+                a { text-decoration: underline !important; }
+                .platform { gap: 10px; display: flex; align-items: center;
+                    img { height: 24px;
+                        &.disabled { opacity: 0.1; }}}}
+            .description { padding-top: 15px; border-top: 1px dashed @cG5;
+                &, * { font-size: @fL; color: @cG3; } 
+                ol { padding-left: 25px; }
+                li { margin-top: 10px; }}}
+        @media screen and (min-width: @sD) { aspect-ratio: 2/1; flex-direction: row;
+            .image { width: 50%; height: 100%; }
+            .detail { width: 50%; height: 100%; }}}}
+@keyframes popup { 0% { margin-bottom: -200vh; } 100% { margin-bottom: 0; }}
+@keyframes popdown { 0% { margin-bottom: 0; } 100% { margin-bottom: -200vh; }}
