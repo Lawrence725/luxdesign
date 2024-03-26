@@ -3,38 +3,45 @@
 
 .home { width: 100%; display: flex; flex-direction: column; background-color: @cBg; overflow-x: hidden;
     > * { scroll-margin-top: 80px; }
-    .covers { width: 100%; height: calc(100vh - 80px); padding: 10px 20px 20px; display: flex; background-color: white;
-        @media screen and (min-width: @sD) { padding: 10px 50px 50px; }
+    .covers { width: 100%; height: calc(100vh - 80px); max-height: 650px; padding: 0 20px 100px; display: flex; background-color: white;
+        @media screen and (min-width: @sD) { max-height: unset; padding: 50px; }
         .cover { width: 100%; padding: 20px; border-radius: 20px; display: flex; flex-direction: column; align-items: flex-end; justify-content: space-around; background-color: @c2; background-size: cover; background-image: url('https://luxdesign.io/img/Cover.gif'); /*background-image: url('../../img/Cover.gif');*/
-            // @media screen and (min-width: @sD) { padding: 50px; flex-direction: row; }
-            .img { width: 50%; }
-            .title { width: 50%; font-size: @fXXXL; font-weight: bold; text-align: center; }}}
-    .services { width: 100%; height: calc(100vh - 80px); padding: 0 20px; display: flex; align-items: center; background-color: white;
-        @media screen and (min-width: @sD) { padding: 0 50px; }
-        .area { width: 50%; padding: 0 50px; gap: 10px; display: flex; flex-direction: column;
+            .img { display: none; width: 50%;
+                @media screen and (min-width: @sD) { display: flex; }}
+            .title { width: 100%; margin-top: auto; font-size: @fXL; font-weight: bold; text-align: center; color: black;
+                @media screen and (min-width: @sD) { width: 50%; margin-top: unset; font-size: @fXXXL; }}}}
+    .services { width: 100%; height: calc(100vh - 80px); padding: 0 20px 100px; gap: 20px; display: flex; flex-direction: column; align-items: center; background-color: white;
+        @media screen and (min-width: @sD) { padding: 50px; flex-direction: row; }
+        .area { width: 100%; gap: 10px; display: flex; flex-direction: column; text-align: center;
+            @media screen and (min-width: @sD) { width: 50%; padding: 0 50px; text-align: start; }
             .title { font-size: @fXXXL; font-weight: bold; }
             .tags { gap: 10px; display: flex;
-                .tag { height: 40px; padding: 0 10px; border-radius: 10px; display: flex; align-items: center; background-color: @c1;
+                .tag { min-height: 40px; padding: 5px 10px; border-radius: 10px; display: flex; align-items: center; background-color: @c1;
                     span { font-size: @fL; color: @cG1; }}}
             .content { font-size: @fXL; }}
-        img { width: 50%; }}
-    .service { width: 100%; height: calc(100vh - 80px); padding: 20px; display: flex; flex-direction: column; background-color: white;
+        img { width: 100%;
+            @media screen and (min-width: @sD) { width: 50%; }}}
+    .service { width: 100%; height: calc(100vh - 80px); padding: 0 20px 100px; display: flex; flex-direction: column; background-color: white;
         @media screen and (min-width: @sD) { padding: 50px; flex-direction: row; }
-        .cover { width: 100%; padding: 20px; border-radius: 20px; gap: 20px; display: flex; flex-direction: column; align-items: center; background-color: @c2;
-            @media screen and (min-width: @sD) { padding: 50px; flex-direction: row; }
+        .cover { width: 100%; height: 100%; padding: 20px; border-radius: 20px; gap: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: @c2;
+            @media screen and (min-width: @sD) { height: unset; padding: 50px; flex-direction: row; }
             .logo { width: 150px; }
-            .area { width: 350px; gap: 10px; display: flex; flex-direction: column;
+            .area { gap: 10px; display: flex; flex-direction: column; text-align: center;
+                @media screen and (min-width: @sD) { .title, .content { width: 350px; text-align: left; }}
                 .title { font-size: @fXXXL; font-weight: bold; }
                 .content { font-size: @fXL; }}
-            .img { width: calc(100% - 540px); }}}
-    .intro { width: 100%; height: calc(100vh - 80px); padding: 20px; display: flex; background-color: white;
-        @media screen and (min-width: @sD) { padding: 50px; }
-        .cover { width: 100%; padding: 20px; border-radius: 20px; gap: 20px; display: flex; flex-direction: column; align-items: center; background-color: @c3;
-            @media screen and (min-width: @sD) { padding: 50px; flex-direction: row; }
-            .area { width: 40%; display: flex; flex-direction: column;
+            .img { max-width: calc(100% - 40px); max-height: 50%; bottom: -20px; position: absolute;
+                @media screen and (min-width: @sD) { width: calc(100% - 540px); bottom: unset; position: unset; max-width: unset; max-height: unset; }}}}
+    .intro { width: 100%; height: calc(100vh - 80px); padding: 0 20px 100px; display: flex; flex-direction: column; background-color: white;
+        @media screen and (min-width: @sD) { padding: 50px; flex-direction: row; }
+        .cover { width: 100%; height: 100%; padding: 20px; border-radius: 20px; gap: 20px; display: flex; flex-direction: column; align-items: center; background-color: @c3;
+            @media screen and (min-width: @sD) { height: unset; padding: 50px; flex-direction: row; }
+            .area { display: flex; flex-direction: column; text-align: center;
+                @media screen and (min-width: @sD) { width: 40%; text-align: left; }
                 .title { font-size: @fXXXL; font-weight: bold; }
                 .content { font-size: @fXL; }}
-            .img { width: calc(60% - 20px); }}}
+            .img { width: 100%;  margin-top: auto;
+                @media screen and (min-width: @sD) { width: calc(60% - 20px); margin-top: unset; }}}}
     .portfolios { width: 100%; display: flex; flex-wrap: wrap;
         .category { width: 50%; display: flex; position: relative;
             img { width: 100%; }
