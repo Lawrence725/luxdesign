@@ -6,7 +6,7 @@ html, body                                  { overscroll-behavior-x: none; }
 select, input, textarea, button, ol, ul     { font-size: @fM; font-family: 'Quicksand', 'Roboto'; }
 span, p, h1, h2, h3, h4, h5, h6, div,
 input, textarea, ol, ul                     { color: @cG1; overflow-wrap: break-word; }
-a                                           { border-radius: 5px; color: inherit; text-decoration: none !important; }
+a                                           { color: inherit; text-decoration: none !important; }
 a:hover                                     { cursor: pointer;
     @media screen and (min-width: @sD)      { box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2); }}
 button                                      { border: none; }
@@ -27,17 +27,19 @@ iframe                                      { border: 0; }
 *, :after, :before                          { box-sizing: border-box !important; -webkit-box-sizing: border-box; }
 
 // Components
-.header { width: 100%; height: 80px; padding: 0 20px; top: 0; position: sticky; display: flex; align-items: center; justify-content: space-between; background-color: white; box-shadow: 0px 5px 10px 0px rgba(55, 84, 170, 0.20); z-index: 10;
-    .logo { display: flex; overflow: hidden;
+.header { width: 100%; height: 80px; padding: 0 20px; gap: 20px; top: 0; position: sticky; display: flex; align-items: center; background-color: white; /*box-shadow: 0px 5px 10px 0px rgba(55, 84, 170, 0.20);*/ z-index: 10;
+    .back { display: flex; align-items: center; justify-content: center;
+        img { width: 30px; }}
+    .logo { width: 100%; min-width: fit-content; display: flex; overflow: hidden;
         @media screen and (max-width: @sSE) { width: 40px; }
         img { height: 40px; }}
-    .menus { gap: 30px; display: flex; align-items: center;
+    .menus { width: 100%; gap: 30px; display: flex; align-items: center; justify-content: flex-end;
         .menu { gap: 5px; display: flex; align-items: center;
             img { height: 24px; }
             span { display: none; font-size: @fL;
                 @media screen and (min-width: @sD) { display: flex; }}}}}
 
-.pop { width: 100%; height: 100%; padding: 10%; position: fixed; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.5); display: none; align-items: center; justify-content: center; z-index: 11;
+.pop { width: 100%; height: 100%; padding: 5%; position: fixed; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.5); display: none; align-items: center; justify-content: center; z-index: 11;
     @media screen and (min-width: @sD) { padding: 5%; }
     .pop__body { max-width: 90vw; max-height: 90vh; aspect-ratio: 1/2; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white; overflow: hidden; animation-name: popup; animation-duration: 0.25s; animation-iteration-count: 1;
         .close { top: 20px; right: 20px; border-radius: 99px; position: absolute; display: flex; background-color: rgba(51, 51, 51, 0.25);

@@ -1,0 +1,37 @@
+@import "./base.less";
+@import "./variable.less";
+
+.research { width: 100%; padding-bottom: 100px; display: flex; flex-direction: column; background-color: white; overflow-x: hidden;
+    .page { width: 100%; height: 80px; padding: 0 20px; top: 80px; position: sticky; display: flex; align-items: center; justify-content: space-between; background-color: @cBg; overflow: hidden;
+        @media screen and (min-width: @sD) { height: 150px; }
+        a { width: 200px; display: flex; align-items: center;
+            &:last-child { justify-content: flex-end; }
+            &:hover { box-shadow: none; }
+            &.disabled { opacity: 0.2; pointer-events: none; }
+            img { width: 30px; }
+            span { display: none; font-size: @fL; 
+                @media screen and (min-width: @sD) { display: flex; }}}
+        div { display: flex; flex-direction: column; align-items: center;
+            h4 { font-size: @fL; color: @cG1; white-space: nowrap; }
+            h3 { font-size: @fXL; color: @cG1; white-space: nowrap; 
+                @media screen and (min-width: @sD) { font-size: @fXXL; }}}
+        .bg { width: 250%; height: 100%; top: 0; left: 0; position: absolute; z-index: -1; }}
+    .banner { width: 100%; padding: 50px 20px 20px; display: flex; align-items: flex-end; scroll-margin-top: 180px;
+        @media screen and (min-width: @sD) { padding: 100px 50px 20px; }
+        h5 { font-size: @fXXXL; font-weight: bold; font-family: 'Roboto'; }}
+    .intro, .process, .outcome { padding: 0 20px; gap: 20px; display: flex;
+        @media screen and (min-width: @sD) { padding: 0 50px; }
+        h4 { font-size: @fL; text-decoration: underline; font-family: 'Roboto'; }
+        span, ul, li, strong { font-size: @fL; text-align: justify; font-family: 'Roboto'; color: @cG1; }
+        span { padding-left: 20px; }
+        ul { padding: 0 0 10px 20px; }
+        li { padding-top: 10px; }}
+    .intro, .outcome { flex-direction: column;
+        div { width: 100%; gap: 10px; display: flex; flex-direction: column; }}
+    .process { flex-wrap: wrap;
+        div { width: 100%; gap: 5px; display: flex; flex-direction: column;
+            @media screen and (min-width: @sD) { width: calc(50% - 20px); }
+            h4 { text-decoration: none; }
+            img { width: 100%; /*transition: transform .2s;
+                @media screen and (min-width: @sD) {
+                    &:hover { transform: scale(1.5); z-index: 9; }}*/}}}}
