@@ -17,14 +17,15 @@
             .bg { width: 100%; height: 100%; top: 0; left: 0; position: absolute; transition: transform .2s;
                 @media screen and (min-width: @sD) {
                     &:hover { transform: scale(1.5); }}}}}
-    .portfolios { width: 100%; gap: 2px; display: flex; flex-wrap: wrap;
-        .category { width: calc(50% - 2px); display: flex; position: relative; background-color: @cBg;
-            img { width: 100%; }
-            .title { width: 73%; top: 10px; right: 10px; position: absolute; text-align: right; font-size: @fXL; color: @cG1;
-                @media screen and (max-width: @sSE) { font-size: @fM; }}
-            .icon { width: 30%; bottom: 20px; left: 20px; position: absolute; }
-            .arrow { width: 30px; bottom: 15px; right: 10px; transform: rotate(90deg); position: absolute;
-                @media screen and (min-width: @sD) { right: 0; top: 50%; bottom: unset; transform: translate(0, -50%); }}}
+    .portfolios { width: 100%; padding-left: 2px; gap: 2px; display: flex; flex-wrap: wrap;
+        .category { width: calc(100% - 2px); height: 80px; padding: 20px; position: relative; display: flex; flex-direction: row; align-items: center; justify-content: space-between; background-color: @cBg;
+            @media screen and (min-width: @sD) { width: calc(50% - 2px); height: unset; flex-direction: column; align-items: flex-end; }
+            .title { width: 90%; margin-right: auto; text-align: left; font-size: @fXL; color: @cG1;
+                @media screen and (min-width: @sD) { margin-right: unset; text-align: right; }}
+            .icon { width: 50px; margin-right: auto;
+                @media screen and (min-width: @sD) { width: 30%; }}
+            .arrow { display: none; width: 30px; top: 50%; right: 0; transform: translate(0, -50%); position: absolute;
+                @media screen and (min-width: @sD) { display: flex; }}}
         .portfolio { width: calc(50% - 2px); display: flex; overflow: hidden;
             img { width: 100%; transition: transform .2s;
                 @media screen and (min-width: @sD) {

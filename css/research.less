@@ -22,7 +22,8 @@
     .intro, .process, .outcome { padding: 0 20px; gap: 20px; display: flex;
         @media screen and (min-width: @sD) { padding: 0 50px; }
         h4 { font-size: @fL; text-decoration: underline; font-family: 'Roboto'; }
-        span, ul, li, strong { font-size: @fL; text-align: justify; font-family: 'Roboto'; color: @cG1; }
+        span, ul, li, strong { font-size: @fL; font-family: 'Roboto'; color: @cG1;
+            @media screen and (min-width: @sD) { text-align: justify; }}
         span { padding-left: 20px; }
         ul { padding: 0 0 10px 20px; }
         li { padding-top: 10px; }}
