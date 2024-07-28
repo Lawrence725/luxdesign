@@ -606,13 +606,19 @@ iframe {
     flex-direction: column;
   }
 }
-.home .team .member .stamps img {
+.home .team .member .stamps a {
   width: 150px;
   height: 150px;
-  padding: 10px;
-  border-radius: 20px;
-  object-fit: contain;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f2f1f6;
+}
+.home .team .member .stamps a img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
 }
 .home .map {
   width: 100%;
