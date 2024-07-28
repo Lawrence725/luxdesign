@@ -32,7 +32,21 @@
                     &:hover { transform: scale(1.1); }}}}
         @media screen and (min-width: @sD) {
             .category, .portfolio { width: calc(20% - 2px); }}}
-    .map { width: 100%; max-height: 50vh; position: relative; display: flex; flex-direction: column;
+    .team { padding: 50px 20px; display: flex; flex-direction: column;
+        .member { gap: 50px; display: flex; flex-direction: column; align-items: center;
+            @media screen and (min-width: @sD) { flex-direction: row; }
+            .profile { width: 350px; height: 350px; border-radius: 999px; }
+            .infos { display: flex; flex-direction: column;
+                .title { font-size: @fXL; font-weight: bold; }
+                .name { font-size: @fXXXL; font-weight: bold; }
+                ol { padding-left: 30px; margin-top: 20px;
+                    * { font-size: @fXL; font-style: italic; }
+                    li { margin-bottom: 10px; }
+                    .sub { color: @cG3; }}}
+            .stamps { gap: 10px; display: flex; flex-direction: row;
+                @media screen and (min-width: @sD) { flex-direction: column; }
+                img { width: 150px; height: 150px; padding: 10px; border-radius: 20px; object-fit: contain; background-color: @cBg; }}}}
+    .map { width: 100%; max-height: 50vh; position: relative; display: flex; flex-direction: column; overflow: hidden;
         h2 { top: 60px; left: 50%; transform: translate(-50%, -50%); position: absolute; font-size: @fXXL; white-space: nowrap; color: white;
             @media screen and (min-width: @sD) { top: 75px; font-size: @fXXXL; }}
         img { width: 100%; height: calc(70vh - 80px); }}
