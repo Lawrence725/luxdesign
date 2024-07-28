@@ -32,11 +32,11 @@
                     &:hover { transform: scale(1.1); }}}}
         @media screen and (min-width: @sD) {
             .category, .portfolio { width: calc(20% - 2px); }}}
-    .team { padding: 50px 20px; display: flex; flex-direction: column;
+    .team { padding: 50px 20px; display: flex; flex-direction: column; align-items: center;
         .member { gap: 50px; display: flex; flex-direction: column; align-items: center;
             @media screen and (min-width: @sD) { flex-direction: row; }
             .profile { width: 350px; height: 350px; border-radius: 999px; }
-            .infos { display: flex; flex-direction: column;
+            .infos { width: 100%; display: flex; flex-direction: column;
                 .title { font-size: @fXL; font-weight: bold; }
                 .name { font-size: @fXXXL; font-weight: bold; }
                 ol { padding-left: 30px; margin-top: 20px;
