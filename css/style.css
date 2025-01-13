@@ -385,9 +385,9 @@ iframe {
   height: 80px;
   padding: 0 20px;
   border-top: 1px solid #f2f1f6;
-  border-bottom: 1px solid #f2f1f6;
+  /* border-bottom: 1px solid @cBg; */
   top: 80px;
-  position: sticky;
+  /* position: sticky; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -470,15 +470,16 @@ iframe {
 }
 .home .portfolios {
   width: 100%;
-  padding-left: 2px;
-  gap: 2px;
+  padding-left: 20px;
+  gap: 20px;
   display: flex;
   flex-wrap: wrap;
 }
 .home .portfolios .category {
-  width: calc(100% - 2px);
+  width: calc(100% - 20px);
   height: 80px;
   padding: 20px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -488,7 +489,7 @@ iframe {
 }
 @media screen and (min-width: 1024px) {
   .home .portfolios .category {
-    width: calc(50% - 2px);
+    width: calc(50% - 20px);
     height: unset;
     flex-direction: column;
     align-items: flex-end;
@@ -530,7 +531,8 @@ iframe {
   }
 }
 .home .portfolios .portfolio {
-  width: calc(50% - 2px);
+  width: calc(50% - 20px);
+  border-radius: 20px;
   display: flex;
   overflow: hidden;
 }
@@ -546,7 +548,7 @@ iframe {
 @media screen and (min-width: 1024px) {
   .home .portfolios .category,
   .home .portfolios .portfolio {
-    width: calc(20% - 2px);
+    width: calc(20% - 20px);
   }
 }
 .home .team {
@@ -625,13 +627,14 @@ iframe {
 .home .map {
   width: 100%;
   max-height: 50vh;
+  margin-top: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 .home .map h2 {
-  top: 60px;
+  top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -641,7 +644,6 @@ iframe {
 }
 @media screen and (min-width: 1024px) {
   .home .map h2 {
-    top: 75px;
     font-size: 2.4rem;
   }
 }
