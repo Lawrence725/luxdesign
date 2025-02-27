@@ -32,7 +32,7 @@ button,
 ol,
 ul {
   font-size: 1rem;
-  font-family: 'Quicksand', 'Roboto';
+  font-family: 'Noto Sans TC', 'Quicksand', 'Roboto';
 }
 span,
 p,
@@ -168,7 +168,7 @@ iframe {
 }
 .header .menus {
   width: 100%;
-  gap: 30px;
+  gap: 25px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -184,6 +184,7 @@ iframe {
 .header .menus .menu span {
   display: none;
   font-size: 1.2rem;
+  white-space: nowrap;
 }
 @media screen and (min-width: 1024px) {
   .header .menus .menu span {
@@ -357,6 +358,20 @@ iframe {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+  font-family: "Noto Sans TC";
+  src: url(https://fonts.gstatic.com/s/notosanstc/v26/-nF7OG829Oofr2wohFbTp9iFOisNA_cTyNromxqQuEMQ2wHYwbnmy1R1jDujLebozBXCo2qYhRo.0.woff2) format("woff2");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  font-family: "Noto Sans TC";
+  src: url(https://fonts.gstatic.com/s/notosanstc/v26/-nFkOG829Oofr2wohFbTp9i9gwQvDt1T39Cx8GLqqFgF1gfCybqlyVAxgTa5Jtz_zCzHs2CN4HYM28s.0.woff2) format("woff2");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
   font-family: "Roboto";
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format("woff2");
 }
@@ -377,21 +392,19 @@ iframe {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: red;
   overflow-x: hidden;
 }
 .home .banner {
   width: 100%;
   height: 80px;
   padding: 0 20px;
-  border-top: 1px solid #f2f1f6;
-  /* border-bottom: 1px solid @cBg; */
+  /* border-top: 1px solid @cBg; border-bottom: 1px solid @cBg; */
   top: 80px;
   /* position: sticky; */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
   z-index: 9;
 }
 @media screen and (min-width: 1024px) {
@@ -416,6 +429,71 @@ iframe {
   .home .scroll {
     scroll-margin-top: 180px;
   }
+}
+.home .animation {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(172deg, rgba(255, 254, 250, 0.7) 41.14%, rgba(173, 129, 0, 0.11) 141.61%);
+}
+.home .animation video {
+  width: auto;
+  height: 100%;
+}
+.home .about {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .home .about {
+    flex-direction: row;
+  }
+}
+.home .about > * {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .home .about > * {
+    width: 50%;
+  }
+}
+.home .about img {
+  aspect-ratio: 1/1;
+}
+.home .about > div {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.home .about > div h2 {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+@media screen and (min-width: 1024px) {
+  .home .about > div h2 {
+    font-size: 2.4rem;
+  }
+}
+.home .about > div h3 {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #FFBE00;
+}
+@media screen and (min-width: 1024px) {
+  .home .about > div h3 {
+    font-size: 1.9rem;
+  }
+}
+.home .about > div td {
+  padding-bottom: 10px;
 }
 .home .researches {
   width: 100%;
@@ -485,7 +563,7 @@ iframe {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #f2f1f6;
+  background-color: #F3F0E6;
 }
 @media screen and (min-width: 1024px) {
   .home .portfolios .category {
@@ -617,7 +695,7 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f2f1f6;
+  background-color: #F3F0E6;
 }
 .home .team .member .stamps a img {
   width: 130px;
@@ -658,7 +736,6 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: white;
 }
 .home .contact img {
   display: none;
@@ -687,7 +764,7 @@ iframe {
   height: 50px;
   padding: 15px;
   border-radius: 15px;
-  background-color: #f2f1f6;
+  background-color: #F3F0E6;
 }
 .home .contact form .content {
   width: 100%;
@@ -695,12 +772,13 @@ iframe {
   min-height: 50px;
   padding: 15px;
   border-radius: 15px;
-  background-color: #f2f1f6;
+  background-color: #F3F0E6;
 }
 .home .contact form .submit {
   width: 100px;
   height: 50px;
   border-radius: 15px;
-  background-color: #333333;
-  color: white;
+  background-color: #FFBE00;
+  color: #333333;
+  font-weight: bold;
 }

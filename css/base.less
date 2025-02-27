@@ -3,7 +3,7 @@
     &:visited                               { color: inherit; }}
 html, body                                  { overscroll-behavior-x: none; }
 *, span, p, h1, h2, h3, h4, h5, h6, div, a,
-select, input, textarea, button, ol, ul     { font-size: @fM; font-family: 'Quicksand', 'Roboto'; }
+select, input, textarea, button, ol, ul     { font-size: @fM; font-family: 'Noto Sans TC', 'Quicksand', 'Roboto'; }
 span, p, h1, h2, h3, h4, h5, h6, div,
 input, textarea, ol, ul                     { color: @cG1; overflow-wrap: break-word; }
 a                                           { color: inherit; text-decoration: none !important; }
@@ -27,21 +27,24 @@ iframe                                      { border: 0; }
 *, :after, :before                          { box-sizing: border-box !important; -webkit-box-sizing: border-box; }
 
 // Components
-.header { width: 100%; height: 80px; padding: 0 20px; gap: 20px; top: 0; position: sticky; display: flex; align-items: center; background-color: white; /*box-shadow: 0px 5px 10px 0px rgba(55, 84, 170, 0.20);*/ z-index: 10;
+.header { width: 100%; height: 80px; padding: 0 20px; gap: 20px; top: 0; position: sticky; display: flex; align-items: center; background-color: @cWhite; /*box-shadow: 0px 5px 10px 0px rgba(55, 84, 170, 0.20);*/ z-index: 10;
     .back { display: flex; align-items: center; justify-content: center;
         img { width: 30px; }}
     .logo { width: 100%; min-width: fit-content; display: flex; overflow: hidden;
         @media screen and (max-width: @sSE) { width: 40px; }
         img { height: 40px; }}
-    .menus { width: 100%; gap: 30px; display: flex; align-items: center; justify-content: flex-end;
+    .menus { width: 100%; gap: 25px; display: flex; align-items: center; justify-content: flex-end;
         .menu { gap: 5px; display: flex; align-items: center;
+            &:nth-child(1) { display: none; }
+            &:nth-child(2) { display: none; }
+            &:last-child { display: none;}
             img { height: 24px; }
-            span { display: none; font-size: @fL;
+            span { display: none; font-size: @fL; white-space: nowrap;
                 @media screen and (min-width: @sD) { display: flex; }}}}}
 
 .pop { width: 100%; height: 100%; padding: 5%; position: fixed; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.5); display: none; align-items: center; justify-content: center; z-index: 11;
     @media screen and (min-width: @sD) { padding: 5%; }
-    .pop__body { max-width: 90vw; max-height: 90vh; aspect-ratio: 1/2; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white; overflow: hidden; animation-name: popup; animation-duration: 0.25s; animation-iteration-count: 1;
+    .pop__body { max-width: 90vw; max-height: 90vh; aspect-ratio: 1/2; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: @cWhite; overflow: hidden; animation-name: popup; animation-duration: 0.25s; animation-iteration-count: 1;
         .close { top: 20px; right: 20px; border-radius: 99px; position: absolute; display: flex; background-color: rgba(51, 51, 51, 0.25);
             img { width: 30px; height: 30px; }}
         .image { width: 100%; height: 50%; }

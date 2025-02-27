@@ -23,18 +23,66 @@
         <section class="header">
             <a class="logo" href="https://www.luxdesign.io"><img src="./img/logo/banner.png"></a>
             <div class="menus">
+                <a class="menu" href="#animation">
+                    <img src="./img/icon/home.svg">
+                    <span>Home</span>
+                </a>
+                <a class="menu" href="#about">
+                    <img src="./img/icon/about.svg">
+                    <span>About</span>
+                </a>
                 <!-- <a class="menu" href="#ux">
                     <img src="./img/icon/ux.svg">
                     <span>UX Research</span>
                 </a> -->
-                <a class="menu" href="#ui">
-                    <img src="./img/icon/ui.svg">
+                <a class="menu" href="#portfolios">
+                    <img src="./img/icon/services.svg">
                     <span>Portfolio</span>
                 </a>
                 <a class="menu" href="#contact">
                     <img src="./img/icon/contact.svg">
                     <span>Contact</span>
                 </a>
+                <a id="languageToggle" class="menu">
+                    <img src="./img/icon/language.svg">
+                    <span data-i18n="language">English</span>
+                </a>
+            </div>
+        </section>
+        <section id="animation" class="animation scroll">
+            <video autoplay loop muted>
+                <source src="./img/Intro.mov" type="video/mp4">
+            </video>
+        </section>
+        <section id="about" class="about scroll">
+            <div>
+                <h2>About LUX Design</h2>
+                <span>At LUX Design, we are dedicated to creating exceptional user experiences through innovative and professional design solutions. Our mission is to blend creativity with functionality to deliver outstanding results.</span>
+                <h3>Our Services</h3>
+                <table>
+                    <tr>
+                        <td>UI/UX Design</td>
+                        <td>Prototyping</td>
+                    </tr>
+                    <tr>
+                        <td>User Research</td>
+                        <td>Interaction Design</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Design</td>
+                        <td>Usability Testing</td>
+                    </tr>
+                    <tr>
+                        <td>Design Systems</td>
+                        <td>Product Design</td>
+                    </tr>
+                    <tr>
+                        <td>Consulting</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="image">
+                <img id="moveAbout" src="./img/family.png">
             </div>
         </section>
         <!-- <section class="banner">
@@ -67,20 +115,20 @@
             </a>
         </section> -->
         <section class="banner">
-            <h2>Portfolio</h2>
+            <h2>Our Works</h2>
         </section>
-        <section id="ui" class="portfolios scroll">
+        <section id="portfolios" class="portfolios scroll">
             <!-- Food Ordering & E-commerce -->
             <div class="category">
-                <span class="title">Food Ordering & E-commerce</span>
+                <span data-i18n="catEcommerce" class="title">Food Ordering & E-commerce</span>
                 <img class="icon" src="./img/category/food.svg">
                 <img class="arrow" src="./img/icon/next-g.svg">
             </div>
-            <a class="portfolio" onclick="popPortfolio('quickclick')">
-                <img src="./img/portfolio/QuickClick.png">
+            <a class="portfolio" onclick="popPortfolio('foodOrdering')">
+                <img src="./img/portfolio/Food Ordering.png">
             </a>
-            <a class="portfolio" onclick="popPortfolio('co')">
-                <img src="./img/portfolio/CO.png">
+            <a class="portfolio" onclick="popPortfolio('counterOrdering')">
+                <img src="./img/portfolio/Counter Ordering.png">
             </a>
             <a class="portfolio" onclick="popPortfolio('ecommerce')">
                 <img src="./img/portfolio/E-commerce.png">
@@ -90,7 +138,7 @@
             </a>
             <!-- Travel & Booking -->
             <div class="category">
-                <span class="title">Travel & Booking</span>
+                <span data-i18n="catTravel" class="title">Travel & Booking</span>
                 <img class="icon" src="./img/category/travel.svg">
                 <img class="arrow" src="./img/icon/next-g.svg">
             </div>
@@ -108,7 +156,7 @@
             </a>
             <!-- Business Website -->
             <div class="category">
-                <span class="title">Business Website</span>
+                <span data-i18n="catBusiness" class="title">Business Website</span>
                 <img class="icon" src="./img/category/business.svg">
                 <img class="arrow" src="./img/icon/next-g.svg">
             </div>
@@ -126,7 +174,7 @@
             </a>
             <!-- Social Networking -->
             <div class="category">
-                <span class="title">Social Networking</span>
+                <span data-i18n="catSocial" class="title">Social Networking</span>
                 <img class="icon" src="./img/category/social.svg">
                 <img class="arrow" src="./img/icon/next-g.svg">
             </div>
@@ -144,7 +192,7 @@
             </a>
             <!-- Financial & Banking -->
             <div class="category">
-                <span class="title">Financial & Banking</span>
+                <span data-i18n="catFinancial" class="title">Financial & Banking</span>
                 <img class="icon" src="./img/category/financial.svg">
                 <img class="arrow" src="./img/icon/next-g.svg">
             </div>
@@ -194,22 +242,26 @@
                 </div>
             </div>
         </section> -->
-        <section class="map">
+        <section class="banner">
             <h2>Worldwide Customers</h2>
-            <img src="./img/Map.png">
+        </section>
+        <section class="map">
+            <img id="moveMap" src="./img/Map.png">
         </section>
         <section class="banner">
-            <h2>Contact Us</h2>
+            <h2>Get in Touch</h2>
         </section>
         <section id="contact" class="contact scroll">
-            <img src="./img/Contact.png">
+            <div class="image">
+                <img id="moveContact" src="./img/Contact.png">
+            </div>
             <form action="mailto:service@luxdesign.io" method="GET">
                 <!-- <span class="title">Contact Us</span> -->
                 <span class="heading">Subject</span>
                 <input class="subject" name="subject" type="text" />
                 <span class="heading">Content</span>
                 <textarea class="content" name="body" oninput="textarea(this)"></textarea>
-                <button class="submit" type="submit">Send</button>
+                <button class="submit" type="submit">Submit</button>
             </form>
         </section>
         <!-- Portfolio popup -->
