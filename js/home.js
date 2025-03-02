@@ -168,3 +168,22 @@ document.getElementById("languageToggle").addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const savedLanguage = getSavedLanguage();
     updateLanguage(savedLanguage); });
+
+// SEO
+document.querySelectorAll('.menu').forEach(menu => {
+    menu.addEventListener('click', function(event) {
+        event.preventDefault();
+        let sectionId = this.getAttribute('href');
+        let targetSection = document.querySelector(sectionId);
+        
+        if (targetSection) {
+            history.pushState(null, null, sectionId);
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth' });}});});
+window.onload = function() {
+    let path = window.location.pathname.substring(1); // 取得當前 URL 的 "about"、"portfolios" 等
+    if (path) {
+        let targetSection = document.getElementById(path);
+        if (targetSection) {
+            window.scrollTo({ top: targetSection.offsetTop, behavior: 'smooth' });}}};

@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" translate="no">
     <head>
-        <title>LUX Design</title>
+        <title>LUX Design | UI/UX Design | Web Design | App Design</title>
         <link rel="icon" type="image/svg" href="./img/logo/favicon.png"/> 
         <meta charset="UTF-8">
-        <meta name="keywords" content="LUX Design">
-        <meta name="description" content="UI/UX Design">
-        <meta name="author" content="Lawrence">
+        <meta name="description" content="LUX Design specializes in UI/UX Design, Web Design, and App Design, helping global enterprises create intuitive and engaging digital experiences.">
+        <meta name="keywords" content="UI/UX Design, Web Design, App Design, Product Design, UX Research, User Experience">
+        <meta name="author" content="LUX Design">
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Screen Ratio -->
         <meta name="google" content="notranslate">
         <meta property="og:title" content="LUX Design"/>
-        <meta property="og:description" content="UI/UX Design"/>
+        <meta property="og:description" content="Expert UI/UX, Web & App Design tailored for global businesses. We craft intuitive digital experiences that drive engagement and growth." />
         <meta property="og:url" content="luxdesign.io"/>
         <meta property="og:image" content="./img/OG.png"/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="627"/>
         <!-- CSS -->
         <link href="./css/style.less" rel="stylesheet/less" type="text/css"/>
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "LUX Design",
+              "url": "https://luxdesign.io",
+              "logo": "https://luxdesign.io/img/logo/banner.png",
+              "description": "LUX Design specializes in UI/UX Design, Web Design, and App Design for global businesses.",
+              "sameAs": [
+                "https://www.linkedin.com/company/luxdesign-io",
+                "https://www.instagram.com/_ux_design"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Taipei",
+                "addressCountry": "Taiwan"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "service@luxdesign.io",
+                "contactType": "customer support"
+              }
+            }
+        </script>
     </head>
     <body id="home" class="home">
         <section class="header">
-            <a class="logo" href="https://www.luxdesign.io"><img src="./img/logo/banner.png"></a>
+            <a class="logo" href="https://www.luxdesign.io"><img src="./img/logo/banner.png" loading="lazy"></a>
             <div class="menus">
                 <a class="menu" href="#animation">
-                    <img src="./img/icon/home.svg">
-                    <span>Home</span>
+                    <img src="./img/icon/home.svg" loading="lazy">
+                    <p>Home</p>
                 </a>
                 <a class="menu" href="#about">
-                    <img src="./img/icon/about.svg">
-                    <span>About</span>
+                    <img src="./img/icon/about.svg" loading="lazy">
+                    <p>About</p>
                 </a>
                 <!-- <a class="menu" href="#ux">
-                    <img src="./img/icon/ux.svg">
-                    <span>UX Research</span>
+                    <img src="./img/icon/ux.svg" loading="lazy">
+                    <p>UX Research</p>
                 </a> -->
                 <a class="menu" href="#portfolios">
-                    <img src="./img/icon/services.svg">
-                    <span>Portfolio</span>
+                    <img src="./img/icon/services.svg" loading="lazy">
+                    <p>Portfolio</p>
                 </a>
                 <a class="menu" href="#contact">
-                    <img src="./img/icon/contact.svg">
-                    <span>Contact</span>
+                    <img src="./img/icon/contact.svg" loading="lazy">
+                    <p>Contact</p>
                 </a>
                 <a id="languageToggle" class="menu">
-                    <img src="./img/icon/language.svg">
-                    <span data-i18n="language">English</span>
+                    <img src="./img/icon/language.svg" loading="lazy">
+                    <p data-i18n="language">English</p>
                 </a>
             </div>
         </section>
@@ -56,33 +80,36 @@
         </section>
         <section id="about" class="about scroll">
             <div>
-                <h2>About LUX Design</h2>
-                <span>At LUX Design, we are dedicated to creating exceptional user experiences through innovative and professional design solutions. Our mission is to blend creativity with functionality to deliver outstanding results.</span>
-                <h3>Our Services</h3>
+                <div class="title">
+                    <p>About</p>
+                    <h1>LUX Design</h1>
+                </div>
+                <p>At LUX Design, we are dedicated to creating exceptional user experiences through innovative and professional design solutions. Our mission is to blend creativity with functionality to deliver outstanding results.</p>
+                <h2>Our Services</h2>
                 <table>
                     <tr>
-                        <td>UI/UX Design</td>
-                        <td>Prototyping</td>
+                        <td><h3>UI/UX Design</h3></td>
+                        <td><h3>Prototyping</h3></td>
                     </tr>
                     <tr>
-                        <td>User Research</td>
-                        <td>Interaction Design</td>
+                        <td><h3>User Research</h3></td>
+                        <td><h3>Interaction Design</h3></td>
                     </tr>
                     <tr>
-                        <td>Visual Design</td>
-                        <td>Usability Testing</td>
+                        <td><h3>Visual Design</h3></td>
+                        <td><h3>Usability Testing</h3></td>
                     </tr>
                     <tr>
-                        <td>Design Systems</td>
-                        <td>Product Design</td>
+                        <td><h3>Design Systems</h3></td>
+                        <td><h3>Product Design</h3></td>
                     </tr>
                     <tr>
-                        <td>Consulting</td>
+                        <td><h3>Consulting</h3></td>
                     </tr>
                 </table>
             </div>
             <div class="image">
-                <img id="moveAbout" src="./img/family.png">
+                <img id="moveAbout" src="./img/family.png" loading="lazy">
             </div>
         </section>
         <!-- <section class="banner">
@@ -91,27 +118,27 @@
         <section id="ux" class="researches scroll"> -->
             <!-- Food Ordering -->
             <!-- <a href="research.html?project=food_ordering">
-                <span>Food Ordering</span>
-                <img class="arrow" src="./img/icon/next-w.svg">
-                <img class="bg" src="./img/research/Food Ordering.png">
+                <p>Food Ordering</p>
+                <img class="arrow" src="./img/icon/next-w.svg" loading="lazy">
+                <img class="bg" src="./img/research/Food Ordering.png" loading="lazy">
             </a> -->
             <!-- Payment Hub -->
             <!-- <a href="research.html?project=payment_hub">
-                <span>Payment Hub</span>
-                <img class="arrow" src="./img/icon/next-w.svg">
-                <img class="bg" src="./img/research/Payment Hub.png">
+                <p>Payment Hub</p>
+                <img class="arrow" src="./img/icon/next-w.svg" loading="lazy">
+                <img class="bg" src="./img/research/Payment Hub.png" loading="lazy">
             </a> -->
             <!-- Coupon App -->
             <!-- <a href="research.html?project=coupon_app">
-                <span>Coupon App</span>
-                <img class="arrow" src="./img/icon/next-w.svg">
-                <img class="bg" src="./img/research/Coupon App.png">
+                <p>Coupon App</p>
+                <img class="arrow" src="./img/icon/next-w.svg" loading="lazy">
+                <img class="bg" src="./img/research/Coupon App.png" loading="lazy">
             </a> -->
             <!-- Mobile Game -->
             <!-- <a href="research.html?project=mobile_game">
-                <span>Mobile Game</span>
-                <img class="arrow" src="./img/icon/next-w.svg">
-                <img class="bg" src="./img/research/Mobile Game.png">
+                <p>Mobile Game</p>
+                <img class="arrow" src="./img/icon/next-w.svg" loading="lazy">
+                <img class="bg" src="./img/research/Mobile Game.png" loading="lazy">
             </a>
         </section> -->
         <section class="banner">
@@ -120,99 +147,99 @@
         <section id="portfolios" class="portfolios scroll">
             <!-- Food Ordering & E-commerce -->
             <div class="category">
-                <span data-i18n="catEcommerce" class="title">Food Ordering & E-commerce</span>
-                <img class="icon" src="./img/category/food.svg">
-                <img class="arrow" src="./img/icon/next-g.svg">
+                <h3 data-i18n="catEcommerce" class="title">Food Ordering & E-commerce</h3>
+                <img class="icon" src="./img/category/food.svg" loading="lazy">
+                <img class="arrow" src="./img/icon/next-g.svg" loading="lazy">
             </div>
             <a class="portfolio" onclick="popPortfolio('foodOrdering')">
-                <img src="./img/portfolio/Food Ordering.png">
+                <img src="./img/portfolio/Food Ordering.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('counterOrdering')">
-                <img src="./img/portfolio/Counter Ordering.png">
+                <img src="./img/portfolio/Counter Ordering.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('ecommerce')">
-                <img src="./img/portfolio/E-commerce.png">
+                <img src="./img/portfolio/E-commerce.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('foodie')">
-                <img src="./img/portfolio/Foodie.png">
+                <img src="./img/portfolio/Foodie.png" loading="lazy">
             </a>
             <!-- Travel & Booking -->
             <div class="category">
-                <span data-i18n="catTravel" class="title">Travel & Booking</span>
-                <img class="icon" src="./img/category/travel.svg">
-                <img class="arrow" src="./img/icon/next-g.svg">
+                <h3 data-i18n="catTravel" class="title">Travel & Booking</h3>
+                <img class="icon" src="./img/category/travel.svg" loading="lazy">
+                <img class="arrow" src="./img/icon/next-g.svg" loading="lazy">
             </div>
             <a class="portfolio" onclick="popPortfolio('trainTicketing')">
-                <img src="./img/portfolio/Train Ticketing.png">
+                <img src="./img/portfolio/Train Ticketing.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('advertisement')">
-                <img src="./img/portfolio/Advertisement.png">
+                <img src="./img/portfolio/Advertisement.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('taoyuanPoint')">
-                <img src="./img/portfolio/Taoyuan Point.png">
+                <img src="./img/portfolio/Taoyuan Point.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('ttpush')">
-                <img src="./img/portfolio/TTPush.png">
+                <img src="./img/portfolio/TTPush.png" loading="lazy">
             </a>
             <!-- Business Website -->
             <div class="category">
-                <span data-i18n="catBusiness" class="title">Business Website</span>
-                <img class="icon" src="./img/category/business.svg">
-                <img class="arrow" src="./img/icon/next-g.svg">
+                <h3 data-i18n="catBusiness" class="title">Business Website</h3>
+                <img class="icon" src="./img/category/business.svg" loading="lazy">
+                <img class="arrow" src="./img/icon/next-g.svg" loading="lazy">
             </div>
             <a class="portfolio" onclick="popPortfolio('countdown')">
-                <img src="./img/portfolio/Countdown.png">
+                <img src="./img/portfolio/Countdown.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('company')">
-                <img src="./img/portfolio/Company.png">
+                <img src="./img/portfolio/Company.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('capitalLink')">
-                <img src="./img/portfolio/Capital LINK.png">
+                <img src="./img/portfolio/Capital LINK.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('interiorDesign')">
-                <img src="./img/portfolio/Interior design.png">
+                <img src="./img/portfolio/Interior design.png" loading="lazy">
             </a>
             <!-- Social Networking -->
             <div class="category">
-                <span data-i18n="catSocial" class="title">Social Networking</span>
-                <img class="icon" src="./img/category/social.svg">
-                <img class="arrow" src="./img/icon/next-g.svg">
+                <h3 data-i18n="catSocial" class="title">Social Networking</h3>
+                <img class="icon" src="./img/category/social.svg" loading="lazy">
+                <img class="arrow" src="./img/icon/next-g.svg" loading="lazy">
             </div>
             <a class="portfolio" onclick="popPortfolio('social')">
-                <img src="./img/portfolio/Social.png">
+                <img src="./img/portfolio/Social.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('wolfpack')">
-                <img src="./img/portfolio/WOLFPACK.png">
+                <img src="./img/portfolio/WOLFPACK.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('health')">
-                <img src="./img/portfolio/Health.png">
+                <img src="./img/portfolio/Health.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('coupon')">
-                <img src="./img/portfolio/Coupon.png">
+                <img src="./img/portfolio/Coupon.png" loading="lazy">
             </a>
             <!-- Financial & Banking -->
             <div class="category">
-                <span data-i18n="catFinancial" class="title">Financial & Banking</span>
-                <img class="icon" src="./img/category/financial.svg">
-                <img class="arrow" src="./img/icon/next-g.svg">
+                <h3 data-i18n="catFinancial" class="title">Financial & Banking</h3>
+                <img class="icon" src="./img/category/financial.svg" loading="lazy">
+                <img class="arrow" src="./img/icon/next-g.svg" loading="lazy">
             </div>
             <a class="portfolio" onclick="popPortfolio('pay')">
-                <img src="./img/portfolio/Pay.png">
+                <img src="./img/portfolio/Pay.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('p360')">
-                <img src="./img/portfolio/360.png">
+                <img src="./img/portfolio/360.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('qrTap')">
-                <img src="./img/portfolio/QR Tap.png">
+                <img src="./img/portfolio/QR Tap.png" loading="lazy">
             </a>
             <a class="portfolio" onclick="popPortfolio('trendspotter')">
-                <img src="./img/portfolio/TrendSpotter.png">
+                <img src="./img/portfolio/TrendSpotter.png" loading="lazy">
             </a>
             <!-- <a class="portfolio">
-                <img src="./img/portfolio/Trade.png">
+                <img src="./img/portfolio/Trade.png" loading="lazy">
             </a>
             <a class="portfolio">
-                <img src="./img/portfolio/Capital.png">
+                <img src="./img/portfolio/Capital.png" loading="lazy">
             </a> -->
         </section>
         <!-- <section class="banner">
@@ -220,25 +247,25 @@
         </section>
         <section id="team" class="team scroll">
             <div class="member">
-                <img class="profile" src="./img/Lawrence.jpg">
+                <img class="profile" src="./img/Lawrence.jpg" loading="lazy">
                 <div class="infos">
-                    <span class="title">Founder</span>
-                    <span class="name">Lawrence</span>
+                    <p class="title">Founder</p>
+                    <p class="name">Lawrence</p>
                     <ol>
                         <li>Google UX Design Certificate</li>
                         <li>Master of Science in Information Systems<br>
-                            <span class="sub">Nanyang Technological University</span></li>
+                            <p class="sub">Nanyang Technological University</p></li>
                         <li>Bachelor of Science in Computer Science<br>
-                            <span class="sub">National Tsing Hua University</span></li>
+                            <p class="sub">National Tsing Hua University</p></li>
                     </ol>
                 </div>
                 <div class="stamps">
                     <a target="_blank" href="https://coursera.org/verify/professional-cert/EJ6YAWX8FJN9">
-                        <img src="./img/Google UX.png"></a>
+                        <img src="./img/Google UX.png" loading="lazy"></a>
                     <a target="_blank" href="https://www.ntu.edu.sg/education/graduate-programme/master-in-science-in-information-systems">
-                        <img src="./img/NTU.png"></a>
+                        <img src="./img/NTU.png" loading="lazy"></a>
                     <a target="_blank" href="https://dcs-en.site.nthu.edu.tw/index.php">
-                        <img src="./img/NTHU.svg"></a>
+                        <img src="./img/NTHU.svg" loading="lazy"></a>
                 </div>
             </div>
         </section> -->
@@ -246,20 +273,20 @@
             <h2>Worldwide Customers</h2>
         </section>
         <section class="map">
-            <img id="moveMap" src="./img/Map.png">
+            <img id="moveMap" src="./img/Map.png" loading="lazy">
         </section>
         <section class="banner">
             <h2>Get in Touch</h2>
         </section>
         <section id="contact" class="contact scroll">
             <div class="image">
-                <img id="moveContact" src="./img/Contact.png">
+                <img id="moveContact" src="./img/Contact.png" loading="lazy">
             </div>
             <form action="mailto:service@luxdesign.io" method="GET">
-                <!-- <span class="title">Contact Us</span> -->
-                <span class="heading">Subject</span>
+                <!-- <p class="title">Contact Us</p> -->
+                <p class="heading">Subject</p>
                 <input class="subject" name="subject" type="text" />
-                <span class="heading">Content</span>
+                <p class="heading">Content</p>
                 <textarea class="content" name="body" oninput="textarea(this)"></textarea>
                 <button class="submit" type="submit">Submit</button>
             </form>
@@ -267,27 +294,27 @@
         <!-- Portfolio popup -->
         <section id="popPortfolio" class="pop" onclick="popClose(this)">
             <div class="pop__body">
-                <a class="close" onclick="popClose(this)"><img src="./img/icon/close.svg"></a>
-                <img id="popImage" class="image">
+                <a class="close" onclick="popClose(this)"><img src="./img/icon/close.svg" loading="lazy"></a>
+                <img id="popImage" class="image" loading="lazy">
                 <div id="popDetail" class="detail">
                     <div class="top">
-                        <img id="popLogo" class="logo">
-                        <span id="popTitle" class="title"></span>
+                        <img id="popLogo" class="logo" loading="lazy">
+                        <p id="popTitle" class="title"></p>
                     </div>
                     <table id="popTable">
                         <tr><th>Date</th>       <td id="popDate"></td></tr>
                         <tr><th>Platform</th>   <td class="platform">
-                            <img id="popIos" src="./img/icon/ios.svg">
-                            <img id="popAndroid" src="./img/icon/android.svg">
-                            <img id="popMobile" src="./img/icon/mobile.svg">
-                            <img id="popTablet" src="./img/icon/tablet.svg">
-                            <img id="popDesktop" src="./img/icon/desktop.svg">
+                            <img id="popIos" src="./img/icon/ios.svg" loading="lazy">
+                            <img id="popAndroid" src="./img/icon/android.svg" loading="lazy">
+                            <img id="popMobile" src="./img/icon/mobile.svg" loading="lazy">
+                            <img id="popTablet" src="./img/icon/tablet.svg" loading="lazy">
+                            <img id="popDesktop" src="./img/icon/desktop.svg" loading="lazy">
                         </td></tr>
                         <tr><th>Location</th>     <td id="popLocation"></td></tr>
                         <tr><th>Client</th>     <td id="popClient"></td></tr>
                         <tr><th>Link</th>       <td><a id="popLink" target="_blank"></a></td></tr>
                     </table>
-                    <span id="popDescription" class="description"></span>
+                    <p id="popDescription" class="description"></p>
                 </div>
             </div>
         </section>

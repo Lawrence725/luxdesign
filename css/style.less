@@ -10,22 +10,24 @@
         @media screen and (min-width: @sD) { scroll-margin-top: 180px; }}
     .animation { width: 100%; height: auto; max-height: 80vh; display: none; align-items: center; justify-content: center; overflow: hidden; background: linear-gradient(172deg, rgba(255, 254, 250, 0.70) 41.14%, rgba(173, 129, 0, 0.11) 141.61%);
         video { width: auto; height: 100%; }}
-    .about { width: 100%; padding: 20px; display: none; align-items: center; flex-direction: column;
+    .about { width: 100%; padding: 20px; display: flex; align-items: center; flex-direction: column;
         @media screen and (min-width: @sD) { flex-direction: row; }
         > * { width: 100%;
             @media screen and (min-width: @sD) { width: 50%; }}
         .image { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; overflow: hidden;
             img { width: 100%; transform: translateX(0px) translateY(0px); }}
         > div { gap: 20px; display: flex; flex-direction: column;
-            h2 { font-size: @fXXL; font-weight: bold;
-                @media screen and (min-width: @sD) { font-size: @fXXXL; }}
-            h3 { margin-top: 20px; font-size: @fXL; font-weight: bold; color: @c1;
+            .title { gap: 10px; display: flex;
+            > * { font-size: @fXXL; font-weight: bold;
+                @media screen and (min-width: @sD) { font-size: @fXXXL; }}}
+            h2 { margin-top: 20px; font-size: @fXL; font-weight: bold; color: @c1;
                 @media screen and (min-width: @sD) { font-size: @fXXL; } }
+            h3 { font-weight: unset; }
             td { padding-bottom: 10px; }}}
     .researches { width: 100%; padding-left: 2px; gap: 2px; display: flex; flex-wrap: wrap;
         a { width: 100%; aspect-ratio: 21/9; padding: 0 20px; position: relative; display: flex; align-items: center; justify-content: space-between; overflow: hidden;
             @media screen and (min-width: @sD) { width: calc(50% - 2px); }
-            span { max-width: 120px; font-size: @fXL; color: white; z-index: 1;
+            p { max-width: 120px; font-size: @fXL; color: white; z-index: 1;
                 @media screen and (min-width: @sD) { max-width: 150px; font-size: @fXXL; }}
             .arrow { height: 50px; z-index: 1; }
             .bg { width: 100%; height: 100%; top: 0; left: 0; position: absolute; transition: transform .2s;
@@ -34,7 +36,7 @@
     .portfolios { width: 100%; padding-left: 20px; gap: 20px; display: flex; flex-wrap: wrap;
         .category { width: calc(100% - 20px); height: 80px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: row; align-items: center; justify-content: space-between; background-color: @cBg;
             @media screen and (min-width: @sD) { width: calc(50% - 20px); height: unset; flex-direction: column; align-items: flex-end; }
-            .title { width: 90%; margin-right: auto; text-align: left; font-size: @fXL; color: @cG1;
+            .title { width: 90%; margin-right: auto; text-align: left; font-size: @fXL; color: @cG1; font-weight: unset;
                 @media screen and (min-width: @sD) { margin-right: unset; text-align: right; }}
             .icon { width: 50px; margin-right: auto;
                 @media screen and (min-width: @sD) { width: 30%; }}
