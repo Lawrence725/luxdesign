@@ -173,11 +173,11 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelectorAll('.menu').forEach(menu => {
     menu.addEventListener('click', function(event) {
         event.preventDefault();
-        let sectionId = this.getAttribute('href');
-        let targetSection = document.querySelector(sectionId);
-        
+        let sectionId = this.getAttribute('href').replace("#", ""); // 移除 #
+        let targetSection = document.getElementById(sectionId);
+
         if (targetSection) {
-            history.pushState(null, null, sectionId);
+            history.pushState(null, null, "/" + sectionId);
             window.scrollTo({
                 top: targetSection.offsetTop,
                 behavior: 'smooth' });}});});
