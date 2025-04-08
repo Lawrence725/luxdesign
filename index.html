@@ -88,6 +88,9 @@
             </video>
         </section>
         <section id="about" class="about scroll">
+            <div class="image">
+                <img id="moveAbout" src="./img/family.png" loading="lazy">
+            </div>
             <div>
                 <div class="title">
                     <p>About</p>
@@ -116,9 +119,7 @@
                         <td><h3>Consulting</h3></td>
                     </tr>
                 </table>
-            </div>
-            <div class="image">
-                <img id="moveAbout" src="./img/family.png" loading="lazy">
+                <a class="menu" href="#contact">Contact Us</a>
             </div>
         </section>
         <!-- <section class="banner">
@@ -291,14 +292,45 @@
             <div class="image">
                 <img id="moveContact" src="./img/Contact.png" loading="lazy">
             </div>
-            <form action="mailto:service@luxdesign.io" method="GET">
-                <!-- <p class="title">Contact Us</p> -->
-                <p class="heading">Subject</p>
-                <input class="subject" name="subject" type="text" />
-                <p class="heading">Content</p>
-                <textarea class="content" name="body" oninput="textarea(this)"></textarea>
-                <button class="submit" type="submit">Submit</button>
-            </form>
+            <div class="">
+                <h2>Follow us</h2>
+                <div class="socials">
+                    <a class="social" href="https://lin.ee/tE74F73" target="_blank">
+                        <img src="./img/icon/social-line.svg">
+                        <h3>LINE</h3>
+                        <p>@lux.design</p>
+                    </a>
+                    <a class="social" href="https://www.linkedin.com/company/luxdesign-io" target="_blank">
+                        <img src="./img/icon/social-linkedin.svg">
+                        <h3>LinkedIn</h3>
+                        <p>linkedin.com/company/luxdesign-io</p>
+                    </a>
+                    <a class="social" href="https://www.instagram.com/_ux_design/" target="_blank">
+                        <img src="./img/icon/social-instagram.svg">
+                        <h3>Instagram</h3>
+                        <p>@_ux_design</p>
+                    </a>
+                    <a class="social" href="mailto:service@luxdesign.io" target="_blank">
+                        <img src="./img/icon/social-mail.svg">
+                        <h3>Email</h3>
+                        <p>service@luxdesign.io</p>
+                    </a>
+                </div>
+                <div class="divider">
+                    <div></div><p>OR</p><div></div>
+                </div>
+                <h2>Send us a message</h2>
+                <form action="mailto:service@luxdesign.io" method="GET">
+                    <p class="heading">Subject</p>
+                    <input class="subject" name="subject" type="text" />
+                    <p class="heading">Content</p>
+                    <textarea class="content" name="body" oninput="textarea(this)"></textarea>
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        <section id="footer" class="footer scroll">
+            <a class="menu" href="#animation">↑</a>
         </section>
         <!-- Portfolio popup -->
         <section id="popPortfolio" class="pop" onclick="popClose(this)">
