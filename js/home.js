@@ -159,11 +159,11 @@ function updateLanguage(language) {
                     language === "en" ? "English" : "繁體中文"; }})
         .catch((error) => console.error("Error loading translations:", error)); }
 // Toggle between English and Traditional Chinese
-document.getElementById("languageToggle").addEventListener("click", () => {
-    const currentLanguage = getSavedLanguage();
-    const newLanguage = currentLanguage === "en" ? "zh" : "en";
-    updateLanguage(newLanguage);
-    saveLanguagePreference(newLanguage); });
+// document.getElementById("languageToggle").addEventListener("click", () => {
+//     const currentLanguage = getSavedLanguage();
+//     const newLanguage = currentLanguage === "en" ? "zh" : "en";
+//     updateLanguage(newLanguage);
+//     saveLanguagePreference(newLanguage); });
 // Initialize the page on load
 document.addEventListener("DOMContentLoaded", () => {
     const savedLanguage = getSavedLanguage();
@@ -179,7 +179,7 @@ document.querySelectorAll('.menu').forEach(menu => {
         if (targetSection) {
             history.pushState(null, null, "/" + sectionId);
             window.scrollTo({
-                top: targetSection.offsetTop,
+                top: targetSection.offsetTop - 200,
                 behavior: 'smooth' });}});});
 window.onload = function() {
     let path = window.location.pathname.substring(1); // 取得當前 URL 的 "about"、"portfolios" 等
