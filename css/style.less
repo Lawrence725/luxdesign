@@ -14,7 +14,7 @@
         @media screen and (min-width: @sD) { height: calc(90vh - 200px); flex-direction: row; }
         > * { width: 100%;
             @media screen and (min-width: @sD) { width: 50%; }}
-        .image { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; overflow: visible;
+        .image { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; overflow: visible; z-index: -1;
             img { width: 100%; transform: translateX(0px) translateY(0px); }}
         > div { gap: 20px; display: flex; flex-direction: column;
             .title { gap: 10px; display: flex;
@@ -67,26 +67,28 @@
                  img { width: 130px; height: 130px; object-fit: contain; }}}}}
     .world { width: 100%; display: flex; flex-direction: column; align-items: center; background-color: @cG6;
         @media screen and (min-width: @sD) { height: calc(90vh - 200px); }
-        .map { width: 100%; height: calc(100% - 150px); display: flex; align-items: center; justify-content: center; overflow: hidden;
-            .image { width: 100%; display: flex;
-                img { width: 100%; transform: translateX(0px) translateY(0px); }}}
-        .logos { width: 100%; min-height: 150px; gap: 20px; background-color: @cG6; display: flex; align-items: center; justify-content: center;
-            @media screen and (min-width: @sD) { gap: 100px; }
+        .map { width: 100%; height: calc(100% - 80px); display: flex; align-items: center; justify-content: center; overflow: hidden;
+            @media screen and (min-width: @sD) { height: calc(100% - 150px); }
+            .image { width: 100%; display: flex; justify-content: center;
+                img { width: 150%; transform: translateX(0px) translateY(0px);
+                    @media screen and (min-width: @sD) { width: 100%; }}}}
+        .logos { width: 100%; min-height: 80px; gap: 20px; background-color: @cG6; display: flex; align-items: center; justify-content: center;
+            @media screen and (min-width: @sD) { min-height: 150px; gap: 100px; }
             img { max-width: 40px; max-height: 40px; filter: grayscale(1);
                 @media screen and (min-width: @sD) { max-width: 80px; max-height: 80px; }}}}
     .contact { width: 100%; padding: 0 20px 100px; display: flex; align-items: center; justify-content: space-around; flex-direction: column; overflow: visible;
-        @media screen and (min-width: @sD) { height: calc(90vh - 200px); flex-direction: row; }
+        @media screen and (min-width: @sD) { min-height: calc(90vh - 200px); flex-direction: row; }
         .image { width: 100%; display: flex;
-            @media screen and (min-width: @sD) { width: 40%; }
+            @media screen and (min-width: @sD) { width: 35%; }
             img { width: 100%; transform: translateX(0px) translateY(0px); }}
         > div:not(.image) { width: 100%; gap: 30px; display: flex; flex-direction: column;
-            @media screen and (min-width: @sD) { width: 60%; }
+            @media screen and (min-width: @sD) { width: 65%; }
             h2 { margin-top: 20px; font-size: @fXL; font-weight: bold; color: @c1;
                 @media screen and (min-width: @sD) { font-size: @fXXL; }}
             .socials { width: 100%; gap: 20px; display: flex; flex-wrap: wrap; align-items: center;
                 @media screen and (min-width: @sD) { flex-wrap: nowrap; }
-                .social { width: calc(50% - 10px); height: 182px; padding: 35px 20px 20px; border-radius: 15px; display: flex; flex-direction: column; align-items: center; background-color: @cBg;
-                    @media screen and (min-width: @sD) { width: 25%; }
+                .social { width: calc(50% - 10px); height: 182px; padding: 35px 10px 10px; border-radius: 15px; display: flex; flex-direction: column; align-items: center; background-color: @cBg;
+                    @media screen and (min-width: @sD) { width: calc(25% - 15px); }
                     img { height: 60px; margin-bottom: 5px; }
                     p { width: 100%; font-size: @fS; text-align: center; }}}
             .divider { width: 100%; gap: 20px; display: flex; align-items: center; justify-content: center;
