@@ -68,11 +68,11 @@
     .world { width: 100%; display: flex; flex-direction: column; align-items: center; background-color: @cG6;
         @media screen and (min-width: @sD) { height: calc(90vh - 200px); }
         .map { width: 100%; height: calc(100% - 80px); display: flex; align-items: center; justify-content: center; overflow: hidden;
-            @media screen and (min-width: @sD) { height: calc(100% - 150px); }
+            @media screen and (min-width: @sD) { height: calc(100% - 0px); }
             .image { width: 100%; display: flex; justify-content: center;
                 img { width: 150%; transform: translateX(0px) translateY(0px);
                     @media screen and (min-width: @sD) { width: 100%; }}}}
-        .logos { width: 100%; min-height: 80px; gap: 20px; background-color: @cG6; display: flex; align-items: center; justify-content: center;
+        .logos { width: 100%; min-height: 80px; gap: 20px; background-color: @cG6; display: none; align-items: center; justify-content: center;
             @media screen and (min-width: @sD) { min-height: 150px; gap: 100px; }
             img { max-width: 40px; max-height: 40px; filter: grayscale(1);
                 @media screen and (min-width: @sD) { max-width: 80px; max-height: 80px; }}}}
